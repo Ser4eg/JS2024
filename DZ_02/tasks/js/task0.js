@@ -5,9 +5,9 @@ let c = parseInt(prompt("Введіть число c:", "3"));
 
 // розрахунок
 let S1 = a + 12 + b;
-let S2 = a + b * 2 * a;
-let S3 = 3 * (a + b) * c;
-let S4 = Math.sin(a - b);
+let S2 = Math.sqrt((a + b) / (2 * a));
+let S3 = Math.cbrt((a + b) * c);
+let S4 = Math.sin(a / -b);
 
 // вивід результату
 document.write(`
