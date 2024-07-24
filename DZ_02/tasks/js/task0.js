@@ -13,9 +13,9 @@ let S4 = Math.sin(a / -b);
 document.write(`
   <h1>Результат обчислення значення виразів для введених даних a=${a}, b=${b}, c=${c}</h1>
   <ol>
-    <li>S1=${S1}</li>
-    <li>S2=${S2}</li>
-    <li>S3=${S3}</li>
-    <li>S4=${S4}</li>
+    <li>S1=${S1.toFixed(2)}</li>
+    <li>S2=${S2.toFixed(2)}</li>
+    <li>S3=${S3.toFixed(2)}</li>
+    <li>S4=${S4.toFixed(2)}</li>
   </ol>
 `);
