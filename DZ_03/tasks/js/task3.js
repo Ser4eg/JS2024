@@ -43,7 +43,7 @@ let stepCount = parseInt(
 // алгоритм перевірки
 while (stepCount > 0) {
   let userNum = parseInt(
-    prompt(`У вас ${stepCount} спроби. Введіть число від 1 до 5:`)
+    prompt("Вкажіть кількість спроб для відгадування числа: (загадане число показано у консолі)", "2")
   );
 
   if (userNum === randomNum) {
