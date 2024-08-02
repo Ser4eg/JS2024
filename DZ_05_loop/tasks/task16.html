@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>task16</title>
+  <link rel="stylesheet" href="../tasks/css/style.css">
+  <link rel="stylesheet" href="../tasks/css/task16.css">
+
+</head>
+
+<body>
+  <a href="../index.html">Повернутись до списку задач</a>
+  <h1>Задача 16. Морський бій. Комп’ютер випадково розташовує одиночний корабель на полі розміром N*M. Маючи К снарядів
+    користувач намагається потопити корабель.</h1>
+
+  <div class="game">
+    <div class="game__settings settings-game">
+      <div class="settings-game__item">
+        <label>Вкажіть кількість рядків від 1 до 10</label>
+        <input class="settings-game__item_row" type="number" min="1" max="10" value="10">
+      </div>
+      <div class="settings-game__item">
+        <label>Вкажіть кількість стовпців від 1 до 10</label>
+        <input class="settings-game__item_col" type="number" min="1" max="10" value="10">
+      </div>
+      <div class="settings-game__item">
+        <label>Вкажіть кількість снарядів</label>
+        <input class="settings-game__item_bullet" type="number" min="1" value="20">
+      </div>
+    </div>
+    <div class="game__zone game-zone">
+      <table class="game-zone__field">
+        <thead>
+          <tr>
+            <th></th>
+            <th>0</th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>5</th>
+            <th>6</th>
+            <th>7</th>
+            <th>8</th>
+            <th>9</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>0</th>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+          </tr>
+          <tr>
+            <th>1</th>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+          </tr>
+          <tr>
+            <th>2</th>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+          </tr>
+          <tr>
+            <th>3</th>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+          </tr>
+          <tr>
+            <th>4</th>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+          </tr>
+          <tr>
+            <th>5</th>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+          </tr>
+          <tr>
+            <th>6</th>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+          </tr>
+          <tr>
+            <th>7</th>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+          </tr>
+          <tr>
+            <th>8</th>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+          </tr>
+          <tr>
+            <th>9</th>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+            <td class="game-zone__field-item" data-positionX="" data-positionY="">?</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <button type="button" class="game__button">Грати</button>
+    <div class="game__result">Результат</div>
+    <div class="game__help"></div>
+  </div>
+  <script src="./js/task16.js"></script>
+</body>
+
+</html>

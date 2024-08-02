@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>task15</title>
+  <link rel="stylesheet" href="../tasks/css/style.css">
+  <link rel="stylesheet" href="../tasks/css/task15.css">
+
+</head>
+
+<body>
+  <a href="../index.html">Повернутись до списку задач</a>
+  <h1>Задача 15. Ігровий автомат. Випадково вибираємо зображення у 3 позиціях. Вибір у кожній позиції вибирається як
+    одне з чотирьох зображень. Вивести ці зображення і повідомити виграш користувача (три перших зображення 100 грн, три
+    других – 200, три третіх – 500, три четвертих зображення – 1000грн). Використати цикли і switch (для вибору
+    зображення за номером).</h1>
+
+  <div class="game">
+    <div class="game__rules">
+      <ol>
+        <li>Лінія з трьох # - 100грн</li>
+        <li>Лінія з трьох @ - 200грн</li>
+        <li>Лінія з трьох $ - 500грн</li>
+        <li>Лінія з трьох 7 - 1000грн</li>
+      </ol>
+    </div>
+    <div class="game__wrap game-zone">
+      <div class="game-zone__item">
+        <span>?</span>
+      </div>
+      <div class="game-zone__item">
+        <span>?</span>
+      </div>
+      <div class="game-zone__item">
+        <span>?</span>
+      </div>
+    </div>
+    <button type="button" class="game__button">Грати</button>
+    <div class="game__result">Результат</div>
+  </div>
+  <script src="./js/task15.js"></script>
+</body>
+
+</html>
