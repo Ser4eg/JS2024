@@ -11,11 +11,10 @@ const firstLetterCode = "A".charCodeAt(0);
 let result = "";
 
 for (let i = 0; i < 5; i++) {
-  result += `${(firstLetterCode + i).fromCharCode(0)}`;
-
   for (let j = 0; j < 5; j++) {
-    result += `${(firstLetterCode + j).fromCharCode(0)}`;
+    result += String.fromCharCode(firstLetterCode + i + j) + " ";
   }
+  result += "<br>"; 
 }
 
 document.write(`${result}`);
