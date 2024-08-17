@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>task9</title>
+  <link rel="stylesheet" href="../tasks/css/task9.css">
+</head>
+
+<body>
+  <a href="../index.html">Повернутись до списку задач</a>
+  <h1>Задача 9. Морський бій.
+    Користувач вводить кількість клітинок одновимірного масиву та кількість одиночних кораблів.
+    Комп’ютер довільно розміщує ці одиночні кораблі у масиві по один у клітинці
+    (якщо у клітинці 0, то клітинка пуста, якщо 1 – то це означає, що там є корабель.)
+    Користувач вводить номер клітинки, куди стріляє.
+    Гра продовжується до тих пір, поки не будуть потоплені усі кораблі.</h1>
+  <div class="game">
+    <div class="game__settings settings-game">
+      <label>Вкажіть кількість ігрових клітинок: <input type="number" id="box" value="5" min="1"></label>
+      <label>Вкажіть кількість одиночних кораблів: <input type="number" id="ship" value="3" min="1"></label>
+      <button id="start-button" type="button" class="game__button">Почати гру</button>
+    </div>
+    <div class="game-board"></div>
+    <div class="game-info"></div>
+    <div class="game__result">Почніть гру</div>
+    <div class="game__help">Почніть гру</div>
+  </div>
+  <script src="./js/task9.js"></script>
+</body>
+
+</html>

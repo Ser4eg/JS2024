@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>task8</title>
+  <link rel="stylesheet" href="../tasks/css/task8.css">
+</head>
+
+<body>
+  <a href="../index.html">Повернутись до списку задач</a>
+  <h1>Задача 8. Дано одновимірний масив, у якому зберігається певна виграшна сума
+    (елементи заповнюються випадковим чином значеннями від -500 до 500).
+    Надаючи користувачу можливість вибирати номери елементів (поки він не відмовиться).
+    Знаходити сумарний виграш.</h1>
+  <div class="game">
+    <div class="game__settings settings-game">
+      <label>Вкажіть кількість ігрових скриньок від 1 до 10: <input type="number" id="box" value="5" min="1"
+          max="10"></label>
+      <button id="start-button" type="button" class="game__button">Почати гру</button>
+    </div>
+    <div class="game-board"></div>
+    <div class="game-info"></div>
+    <div class="game__result">Почніть гру</div>
+    <div class="game__help">Почніть гру</div>
+  </div>
+  <script src="./js/task8.js"></script>
+</body>
+
+</html>
