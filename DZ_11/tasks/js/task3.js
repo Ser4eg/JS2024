@@ -10,20 +10,27 @@ const gameHelp = document.querySelector(".game__help");
 const gameResult = document.querySelector(".game__result");
 let gameBoard = document.querySelector(".game__board");
 let shipsList = [];
+let gameBoardSize = 0;
 let shipsNumber = 0;
 let shots = 0;
 
 startGame.addEventListener("click", function () {
-  const gameBoardSize = getGameBoardSize(
-    document.getElementById("boxNumber").value
+  // const gameBoardSize = getGameBoardSize(
+  //   document.getElementById("boxNumber").value
+  // );
+
+  gameBoardSize = parseInt(document.getElementById("boxNumber").value);
+  shipsNumber = parseInt(document.getElementById("shipsNumber").value);
+  shots = parseInt(document.getElementById("shotsNumber").value);
+
+  const isValidSettings = validateGameSettings(
+    gameBoardSize,
+    shipsNumber,
+    shots
   );
 
-  shipsNumber = getGameBoardSize(document.getElementById("shipsNumber").value);
-  shots = getGameBoardSize(document.getElementById("shotsNumber").value);
-
-  if (gameBoardSize !== "error") {
+  if (isValidSettings) {
     gameBoard.style = `grid-template-columns: repeat(${gameBoardSize}, 30px);`;
-
     buildGameElements(gameBoardSize);
     shipsList = generateShips(gameBoardSize, shipsNumber);
     console.log(shipsList);
@@ -37,17 +44,20 @@ startGame.addEventListener("click", function () {
   }
 });
 
-function getGameBoardSize(value) {
-  let result;
-  const size = parseInt(value.trim());
+function validateGameSettings(gameBoardSize, shipsNumber, shots) {
+  let isValid = true;
 
-  if (Math.sign(size) <= 0 || Math.sign(size) === NaN) {
-    result = "error";
-  } else {
-    result = size;
+  if (
+    gameBoardSize < 2 ||
+    shipsNumber < 1 ||
+    shots < 1 ||
+    shipsNumber > gameBoardSize * gameBoardSize ||
+    shots < shipsNumber
+  ) {
+    isValid = false;
   }
 
-  return result;
+  return isValid;
 }
 
 function buildGameElements(gameBoardSize = 10) {
