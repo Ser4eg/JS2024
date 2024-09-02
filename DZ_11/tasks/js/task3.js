@@ -123,7 +123,7 @@ function handleClickBox(event) {
     gameResult.innerText =
       "Нажаль, ви не вразили усі кораблі! Почніть нову гру.";
     gameHelp.innerText = `Гру завершено! Ваш результат: залишилось ${shipsNumber} кораблів і ${shots} пострілів`;
-    gameOver(event.target);
+    gameOver();
   }
 }
 
