@@ -15,10 +15,6 @@ let shipsNumber = 0;
 let shots = 0;
 
 startGame.addEventListener("click", function () {
-  // const gameBoardSize = getGameBoardSize(
-  //   document.getElementById("boxNumber").value
-  // );
-
   gameBoardSize = parseInt(document.getElementById("boxNumber").value);
   shipsNumber = parseInt(document.getElementById("shipsNumber").value);
   shots = parseInt(document.getElementById("shotsNumber").value);
