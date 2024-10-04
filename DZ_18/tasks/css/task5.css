@@ -1,0 +1,18 @@
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+
+table {
+  border-collapse: collapse;
+  width: 200px;
+}
+
+td {
+  border: 1px solid #000;
+  padding: 10px;
+  text-align: center;
+  font-size: 18px;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>task7</title>
+  <link rel="stylesheet" href="./css/task7.css">
+</head>
+
+<body>
+  <a href="../index.html">Повернутись до списку задач</a>
+  <h1>Задача 7. Подорож складається з 3 етапів.
+    На кожному етапі користувач може вибрати один з видів транспорту (авто, автобус, літак - випадаючий список),
+    харчування (сніданок, обід, вечеря – checkbоx)
+    та одного з 3-х гідів(використати - radio buttons).
+    Ціни визначте самі.
+    Підрахувати загальну вартість.
+  </h1>
+  <div class="wrap">
+    <div class="container">
+      <h1>Подорож</h1>
+      <form id="travelForm">
+        <!-- Етапи подорожі -->
+        <div class="stage" id="stage1">
+          <h2>Етап 1</h2>
+          <label>Вид транспорту:</label>
+          <select name="transport1">
+            <option value="500">Авто - 500 грн</option>
+            <option value="300">Автобус - 300 грн</option>
+            <option value="2000">Літак - 2000 грн</option>
+          </select>
+          <br>
+          <label>Харчування:</label>
+          <input type="checkbox" name="meal1" value="150"> Сніданок - 150 грн
+          <input type="checkbox" name="meal1" value="300"> Обід - 300 грн
+          <input type="checkbox" name="meal1" value="200"> Вечеря - 200 грн
+          <br>
+          <label>Гід:</label>
+          <input type="radio" name="guide1" value="500" checked> Гід A - 500 грн
+          <input type="radio" name="guide1" value="700"> Гід B - 700 грн
+          <input type="radio" name="guide1" value="1000"> Гід C - 1000 грн
+        </div>
+
+        <div class="stage" id="stage2">
+          <h2>Етап 2</h2>
+          <label>Вид транспорту:</label>
+          <select name="transport2">
+            <option value="500">Авто - 500 грн</option>
+            <option value="300">Автобус - 300 грн</option>
+            <option value="2000">Літак - 2000 грн</option>
+          </select>
+          <br>
+          <label>Харчування:</label>
+          <input type="checkbox" name="meal2" value="150"> Сніданок - 150 грн
+          <input type="checkbox" name="meal2" value="300"> Обід - 300 грн
+          <input type="checkbox" name="meal2" value="200"> Вечеря - 200 грн
+          <br>
+          <label>Гід:</label>
+          <input type="radio" name="guide2" value="500" checked> Гід A - 500 грн
+          <input type="radio" name="guide2" value="700"> Гід B - 700 грн
+          <input type="radio" name="guide2" value="1000"> Гід C - 1000 грн
+        </div>
+
+        <div class="stage" id="stage3">
+          <h2>Етап 3</h2>
+          <label>Вид транспорту:</label>
+          <select name="transport3">
+            <option value="500">Авто - 500 грн</option>
+            <option value="300">Автобус - 300 грн</option>
+            <option value="2000">Літак - 2000 грн</option>
+          </select>
+          <br>
+          <label>Харчування:</label>
+          <input type="checkbox" name="meal3" value="150"> Сніданок - 150 грн
+          <input type="checkbox" name="meal3" value="300"> Обід - 300 грн
+          <input type="checkbox" name="meal3" value="200"> Вечеря - 200 грн
+          <br>
+          <label>Гід:</label>
+          <input type="radio" name="guide3" value="500" checked> Гід A - 500 грн
+          <input type="radio" name="guide3" value="700"> Гід B - 700 грн
+          <input type="radio" name="guide3" value="1000"> Гід C - 1000 грн
+        </div>
+
+        <button type="button" onclick="calculateTotal()">Обчислити загальну вартість</button>
+      </form>
+
+      <h2>Загальна вартість: <span id="totalCost">0 грн</span></h2>
+    </div>
+  </div>
+  <script src="./js/task7.js"></script>
+</body>
+
+</html>
