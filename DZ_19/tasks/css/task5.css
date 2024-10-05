@@ -1,0 +1,22 @@
+#productContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.product-card {
+  width: 150px;
+  height: 200px;
+  border: 2px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.product-card.selected {
+  border-color: green;
+}

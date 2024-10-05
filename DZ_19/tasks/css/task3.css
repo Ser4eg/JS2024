@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+ol {
+  width: 100px;
+  margin: 10px 0;
+  padding-inline-start: 25px;
+}
+
+.green {
+  background-color: green;
+}
+
+.red {
+  background-color: red;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+}

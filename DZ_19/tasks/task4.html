@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>task4</title>
+  <link rel="stylesheet" href="./css/task4.css">
+  <script src="./js/task4.js"></script>
+</head>
+
+<body>
+  <a href="../index.html">Повернутись до списку задач</a>
+  <h1>Задача 4. Дано 3 таблиці розмірності 3*3 з випадковими числами.
+    Якщо відбувається клік на якійсь із клітинок, то до відповідної таблиці додається червона рамка
+    (спробуйте додати можливість відображення кількості кліків біля назви таблиці
+    з використанням відповідно доданого для цього атрибута).
+  </h1>
+  <div id="controls">
+    <label for="numRows">Кількість рядків:</label>
+    <input type="number" id="numRows" min="1" value="3">
+    <label for="numCols">Кількість стовпців:</label>
+    <input type="number" id="numCols" min="1" value="3">
+    <button id="createTablesButton">Створити таблиці</button>
+  </div>
+  <div id="tablesContainer"></div>
+</body>
+
+</html>
