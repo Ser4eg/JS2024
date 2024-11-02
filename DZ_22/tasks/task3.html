@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>task3</title>
+  <link rel="stylesheet" href="./css/task3.css">
+  <script src="./js/task3.js"></script>
+</head>
+
+<body>
+  <a href="../index.html">Повернутись до списку задач</a>
+  <h1>Регулярні вирази
+  </h1>
+  <h1>Текстовий Аналізатор</h1>
+
+  <div id="task-inputs">
+    <!-- Введення для кожної задачі з дефолтними значеннями -->
+    <div class="task">
+      <h3>Задача 1: Рядки з цифрами</h3>
+      <input type="text" id="task1" value="text123, hello, 456test">
+    </div>
+    <div class="task">
+      <h3>Задача 2: Рядки без цифр</h3>
+      <input type="text" id="task2" value="hello, world, test123">
+    </div>
+    <div class="task">
+      <h3>Задача 3: Рядки з голосними</h3>
+      <input type="text" id="task3" value="hello, hll, abc">
+    </div>
+    <div class="task">
+      <h3>Задача 4: Рядки без голосних</h3>
+      <input type="text" id="task4" value="hll, world, txt">
+    </div>
+    <div class="task">
+      <h3>Задача 5: Рядки з '1' або '3'</h3>
+      <input type="text" id="task5" value="test1, test, abc3">
+    </div>
+    <div class="task">
+      <h3>Задача 6: Числа в тексті</h3>
+      <input type="text" id="task6" value="The 123 dog has 2 bones">
+    </div>
+    <div class="task">
+      <h3>Задача 7: Знаки пунктуації</h3>
+      <input type="text" id="task7" value="Hello, world! How are you?">
+    </div>
+    <div class="task">
+      <h3>Задача 8: Сегменти за розділовими знаками</h3>
+      <input type="text" id="task8" value="Hello, world! Let's test.">
+    </div>
+    <div class="task">
+      <h3>Задача 9: Чи є дата?</h3>
+      <input type="text" id="task9" value="Today is 12.05.2023 and it's sunny">
+    </div>
+    <div class="task">
+      <h3>Задача 10: Кількість двоцифрових чисел</h3>
+      <input type="text" id="task10" value="I have 12 cats and 3 dogs and 45 fish">
+    </div>
+    <div class="task">
+      <h3>Задача 11: Номери банківських карток</h3>
+      <input type="text" id="task11" value="My card is 1234-5678-9101-1121">
+    </div>
+    <div class="task">
+      <h3>Задача 12: Чи урядовий сайт?</h3>
+      <input type="text" id="task12" value="https://example.gov">
+    </div>
+    <div class="task">
+      <h3>Задача 13: Роки після 2021</h3>
+      <input type="text" id="task13" value="In 2022, we did something. 2025 is coming soon">
+    </div>
+    <div class="task">
+      <h3>Задача 14: Чи український номер телефону?</h3>
+      <input type="text" id="task14" value="+380991234567">
+    </div>
+    <div class="task">
+      <h3>Задача 15: Заміна пробілу на дефіс</h3>
+      <input type="text" id="task15" value="John Doe">
+    </div>
+    <div class="task">
+      <h3>Задача 16: Формат дати день/місяць/рік</h3>
+      <input type="text" id="task16" value="12.05.2023">
+    </div>
+    <div class="task">
+      <h3>Задача 17: Чи вихідний день?</h3>
+      <input type="text" id="task17" value="sun">
+    </div>
+  </div>
+
+  <button onclick="analyzeText()">Аналізувати</button>
+  <div id="task-results"></div>
+</body>
+
+</html>
