@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>task3</title>
+  <link rel="stylesheet" href="./css/task3.css">
+  <script src="./js/task3.js"></script>
+</head>
+
+<body>
+  <a href="../index.html">Повернутись до списку задач</a>
+  <h1>Задача 1. Виводити на екран скільки хвилин користувач вже на сайті
+    Задача 2. Визначити скільки залишилось до кінця робочого дня (до 17.00)
+    Задача 3. Створити функцію, яка дозволяє визначити, чи знаходиться вказана дата і час у межах поточного тижня (від
+    понеділка 0 год, 0хв, до неділі 23год.59хв)
+  </h1>
+  <h1>Робота з датами</h1>
+
+  <div>
+    <h2>Скільки хвилин користувач на сайті:</h2>
+    <p id="time-on-site">Чекайте...</p>
+  </div>
+
+  <div>
+    <h2>Скільки залишилось до кінця робочого дня:</h2>
+    <p id="time-until-end-of-workday">Чекайте...</p>
+  </div>
+
+  <div>
+    <h2>Чи входить вказана дата в поточний тиждень:</h2>
+    <input type="datetime-local" id="target-date" />
+    <button onclick="tracker.checkCurrentWeek()">Перевірити</button>
+    <p id="is-within-current-week">Чекайте...</p>
+  </div>
+
+  <div>
+    <h2>Секундомір (час, проведений на сайті):</h2>
+    <p id="stopwatch">00:00:00</p>
+  </div>
+</body>
+
+</html>
